@@ -1,6 +1,6 @@
 .preview {
   width: 800px;
-  min-height: 970px;
+  height: 970px;
   background-color: #fff;
 }
 .preview > :not(header) {

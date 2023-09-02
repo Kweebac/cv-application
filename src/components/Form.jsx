@@ -46,6 +46,62 @@ export function Form({ data, setData }) {
           />
         </label>
       </section>
+      <section>
+        <h1>Education</h1>
+        <label>
+          School
+          <input type="text" />
+        </label>
+        <label>
+          Degree
+          <input type="text" />
+        </label>
+        <div className="dates">
+          <label>
+            Start date
+            <input type="date" />
+          </label>
+          <label>
+            End date
+            <input type="date" />
+          </label>
+        </div>
+        <label>
+          Location
+          <input type="text" />
+        </label>
+        <button>Save</button>
+      </section>
+      <section>
+        <h1>Experience</h1>
+        <label>
+          Company
+          <input type="text" />
+        </label>
+        <label>
+          Position
+          <input type="text" />
+        </label>
+        <div className="dates">
+          <label>
+            Start date
+            <input type="date" />
+          </label>
+          <label>
+            End date
+            <input type="date" />
+          </label>
+        </div>
+        <label>
+          Location
+          <input type="text" />
+        </label>
+        <label>
+          Description
+          <textarea cols="30" rows="10"></textarea>
+        </label>
+        <button>Save</button>
+      </section>
     </form>
   );
 }
