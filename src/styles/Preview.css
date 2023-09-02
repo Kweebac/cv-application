@@ -1,0 +1,23 @@
+.preview {
+  width: 800px;
+  min-height: 970px;
+  background-color: #fff;
+}
+.preview > :not(header) {
+  margin: 0 3rem;
+}
+.preview > h1 {
+  font-size: 1.5rem;
+  padding: 0.2rem;
+  text-align: center;
+  background-color: #eef1f2;
+  font-weight: bold;
+  color: rgb(8, 42, 62);
+  margin-top: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.preview .educationSection {
+  display: grid;
+  gap: 1rem;
+}

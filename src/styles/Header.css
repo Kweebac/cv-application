@@ -1,0 +1,17 @@
+header {
+  background-color: #0e374e;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+
+  display: grid;
+  place-content: center;
+  gap: 1.5rem;
+}
+header > h1 {
+  margin: 0;
+}
+header > div {
+  display: flex;
+  gap: 1rem;
+}
