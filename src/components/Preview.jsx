@@ -11,14 +11,16 @@ export function Preview({ data }) {
       <h1>Education</h1>
       <section className="educationSection">
         {data.education.map((place) => (
-          <Education data={place} />
+          <Education key={place.key} data={place} />
         ))}
       </section>
 
       <h1>Experience</h1>
-      {data.experience.map((place) => (
-        <Experience data={place} />
-      ))}
+      <section className="experienceSection">
+        {data.experience.map((place) => (
+          <Experience key={place.key} data={place} />
+        ))}
+      </section>
     </div>
   );
 }

@@ -17,7 +17,8 @@
   margin-bottom: 0.5rem;
 }
 
-.preview .educationSection {
+.preview .educationSection,
+.preview .experienceSection {
   display: grid;
   gap: 1rem;
 }

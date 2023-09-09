@@ -1,7 +1,7 @@
 .experience {
   display: grid;
   grid-auto-flow: column;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: 11rem 1fr;
   gap: 2rem;
 }
 .experience h3 {
