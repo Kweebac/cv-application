@@ -21,29 +21,11 @@ export function App() {
         endDate: "",
         location: "New York City, US",
       },
-      {
-        key: crypto.randomUUID(),
-        school: "City University",
-        degree: "Economics",
-        startDate: "08/2020",
-        endDate: "",
-        location: "New York City, US",
-      },
     ],
     experience: [
       {
         key: crypto.randomUUID(),
         company: "Umbrella Inc.",
-        position: "Software Engineer",
-        startDate: "2023-09-06",
-        endDate: "",
-        location: "New York City, US",
-        description:
-          "Supported senior researchers on accessibility standards for the open web. Created and usability tested wireframes and prototypes. Produced interactive documentation for quick onboarding of new researchers.",
-      },
-      {
-        key: crypto.randomUUID(),
-        company: "Test",
         position: "Software Engineer",
         startDate: "2023-09-06",
         endDate: "",

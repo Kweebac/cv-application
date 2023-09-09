@@ -50,7 +50,8 @@ function BasicInfo({ data, setData }) {
 }
 
 function EducationFormInput({ data, setData, placeKey }) {
-  const index = data.education.map((item) => item.key).indexOf(placeKey);
+  let index;
+  if (data.education.length) index = data.education.map((item) => item.key).indexOf(placeKey);
 
   return (
     <div>
@@ -58,7 +59,7 @@ function EducationFormInput({ data, setData, placeKey }) {
         School
         <input
           type="text"
-          value={data.education[index].school}
+          value={data.education.length ? data.education[index].school : ""}
           onChange={(e) => {
             setData({
               ...data,
@@ -74,7 +75,7 @@ function EducationFormInput({ data, setData, placeKey }) {
         Degree
         <input
           type="text"
-          value={data.education[index].degree}
+          value={data.education.length ? data.education[index].degree : ""}
           onChange={(e) => {
             setData({
               ...data,
@@ -91,7 +92,7 @@ function EducationFormInput({ data, setData, placeKey }) {
           Start date
           <input
             type="date"
-            value={data.education[index].startDate}
+            value={data.education.length ? data.education[index].startDate : ""}
             onChange={(e) => {
               setData({
                 ...data,
@@ -107,7 +108,7 @@ function EducationFormInput({ data, setData, placeKey }) {
           End date
           <input
             type="date"
-            value={data.education[index].endDate}
+            value={data.education.length ? data.education[index].endDate : ""}
             onChange={(e) => {
               setData({
                 ...data,
@@ -124,7 +125,7 @@ function EducationFormInput({ data, setData, placeKey }) {
         Location
         <input
           type="text"
-          value={data.education[index].location}
+          value={data.education.length ? data.education[index].location : ""}
           onChange={(e) => {
             setData({
               ...data,
@@ -217,7 +218,9 @@ function EducationForm({ data, setData }) {
         <EducationFormInput
           data={data}
           setData={setData}
-          placeKey={data.education[data.education.length - 1].key}
+          placeKey={
+            data.education.length ? data.education[data.education.length - 1].key : undefined
+          }
         />
         <button
           className="end"
@@ -235,7 +238,9 @@ function EducationForm({ data, setData }) {
 }
 
 function ExperienceFormInput({ data, setData, placeKey }) {
-  const index = data.experience.map((item) => item.key).indexOf(placeKey);
+  let index;
+  if (data.experience.length)
+    index = data.experience.map((item) => item.key).indexOf(placeKey);
 
   return (
     <div>
@@ -243,7 +248,7 @@ function ExperienceFormInput({ data, setData, placeKey }) {
         Company
         <input
           type="text"
-          value={data.experience[index].company}
+          value={data.experience.length ? data.experience[index].company : ""}
           onChange={(e) => {
             setData({
               ...data,
@@ -259,7 +264,7 @@ function ExperienceFormInput({ data, setData, placeKey }) {
         Position
         <input
           type="text"
-          value={data.experience[index].position}
+          value={data.experience.length ? data.experience[index].position : ""}
           onChange={(e) => {
             setData({
               ...data,
@@ -276,7 +281,7 @@ function ExperienceFormInput({ data, setData, placeKey }) {
           Start date
           <input
             type="date"
-            value={data.experience[index].startDate}
+            value={data.experience.length ? data.experience[index].startDate : ""}
             onChange={(e) => {
               setData({
                 ...data,
@@ -292,7 +297,7 @@ function ExperienceFormInput({ data, setData, placeKey }) {
           End date
           <input
             type="date"
-            value={data.experience[index].endDate}
+            value={data.experience.length ? data.experience[index].endDate : ""}
             onChange={(e) => {
               setData({
                 ...data,
@@ -309,7 +314,7 @@ function ExperienceFormInput({ data, setData, placeKey }) {
         Location
         <input
           type="text"
-          value={data.experience[index].location}
+          value={data.experience.length ? data.experience[index].location : ""}
           onChange={(e) => {
             setData({
               ...data,
@@ -326,7 +331,7 @@ function ExperienceFormInput({ data, setData, placeKey }) {
         <textarea
           cols="30"
           rows="10"
-          value={data.experience[index].description}
+          value={data.experience.length ? data.experience[index].description : ""}
           onChange={(e) => {
             setData({
               ...data,
@@ -420,7 +425,11 @@ function ExperienceForm({ data, setData }) {
         <ExperienceFormInput
           data={data}
           setData={setData}
-          placeKey={data.experience[data.experience.length - 1].key}
+          placeKey={
+            data.experience.length
+              ? data.experience[data.experience.length - 1].key
+              : undefined
+          }
         />
         <button
           className="end"
